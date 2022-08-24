@@ -162,3 +162,17 @@ console.log("****** CONDITIONS *******");
 //! eğer kişinin geliri giderinden en az asgari ücret kadar fazla ise Kredi Verilebilir 🤑
 //! değilse  Kredi Verilemez 🥺
 //! şeklinde çıktı veren kodu Ternary deyimi kullanarak yazınız.
+
+//?kendi çözümüm
+// const gelir = Number(prompt("Lütfen mevcut aylık gelirinizi giriniz:"));
+// const gider = Number(prompt("Lütfen mevcut aylık giderinizi giriniz:"));
+// const asgari = 5500;
+// const karar = gelir - gider >= asgari ? "Tebrikler! Kredi almaya hak kazandınız" : "Üzgünüz, tekrar deneyebilirsiniz.";
+// console.log(karar)
+
+
+// ? hoca çözümü
+// const gider = Number(prompt("Giderlerinizi giriniz"));
+// const gelir = Number(prompt("Gelirleriniz giriniz"));
+// const kredi = gelir - gider >= 5000 ? "KREDI ALABILIR 🤑" : " KREDI ALAMAZ 🥺";
+// console.log(kredi);
