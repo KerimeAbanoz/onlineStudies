@@ -63,7 +63,7 @@ console.log("****** CONDITIONS *******");
 // }
 // console.log(`${enBuyuk} en buyuktur`);
 
-//! ODEV1: 
+//! ODEV1:
 // !Dort Islem Hesap Makinasi
 //! iki sayı ve bir operatör(işlem ne ise +-/x falan) kullanıcıdan alıp sonucu yazdıracak
 
@@ -101,7 +101,7 @@ console.log("****** CONDITIONS *******");
 //     break;
 //   default:
 //     console.log(`Girdiğiniz değer haftanın bir günü değildir.`);
-    // break;
+// break;
 // }
 
 // ? hoca çözümü
@@ -145,8 +145,18 @@ console.log("****** CONDITIONS *******");
 //! ODEV3:Maasi asgari ucretten az olanlara %50 zam,
 //! fazla olanlara ise %10 zam yapmak istiyoruz.
 
-//* let maas = 5000;
-//* maas = maas * 1.5
+//?kendi çözümüm
+// const maas = Number(prompt("Lütfen mevcut maasınızı giriniz:"));
+// const asgari = 5500;
+// const zamliMaas = maas >= asgari ? maas * 1.1 : maas * 1.5;
+// console.log(`Mevcut maaşınız ${maas} olup zam sonrasında ${zamliMaas} olarak güncellenmiştir.`)
+
+
+// ? hoca çözümü
+// const maas = Number(prompt("Maasinizi giriniz"));
+// const asgariUcret = 5500;
+// const zamliMaas = maas >= asgariUcret ? maas * 1.1 : maas * 1.5;
+// console.log("NORMAL MAAS:", maas, "ZAMLI MAAS:", Math.trunc(zamliMaas));
 
 //! ODEV4: Console’dan kişinin gelir ve gider miktarını alan
 //! eğer kişinin geliri giderinden en az asgari ücret kadar fazla ise Kredi Verilebilir 🤑
