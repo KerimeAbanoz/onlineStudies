@@ -9,7 +9,7 @@ console.log("****** CONDITIONS *******");
 //? ORNEK1: Console'dan girilen bir sayisinin pozitif,negatif
 //? yada 0 oldugunu tespit ederek yazdiriniz.
 
-//! Benim çözümüm:
+//? Benim çözümüm:
 
 // const sayi = prompt("Rakamla bir sayi giriniz");
 
@@ -24,7 +24,7 @@ console.log("****** CONDITIONS *******");
 // }
 // console.log(sayi, `girdisinin türü:`, typeof sayi);
 
-//! hocanın çözümü:
+//? hocanın çözümü:
 
 // const sayi = Number(prompt("Bir sayi giriniz:"));
 // if (sayi > 0) {
@@ -63,7 +63,8 @@ console.log("****** CONDITIONS *******");
 // }
 // console.log(`${enBuyuk} en buyuktur`);
 
-//! ODEV1: Dort Islem Hesap Makinasi
+//! ODEV1: 
+// !Dort Islem Hesap Makinasi
 //! iki sayı ve bir operatör(işlem ne ise +-/x falan) kullanıcıdan alıp sonucu yazdıracak
 
 //**************** SWITCH-CASE *******************
@@ -78,35 +79,52 @@ console.log("****** CONDITIONS *******");
 //! Pazar -> Self-Study
 //! Aksi takdirde -> Yanlis gun girildi.
 
-const gun = prompt("haftanın bir gününü giriniz:");
+// ? benim çözümüm
 
-switch (gun) {
-  case "pazartesi":
-    console.log(`Programınızda InClass aktivitesi var`);
-    break;
-  case "salı":
-    console.log(`Programınızda InClass aktivitesi var`);
-    break;
-  case "çarşamba":
-    console.log(`Programınızda InClass aktivitesi var`);
-    break;
-  case "perşembe":
-    console.log(`Programınızda InClass aktivitesi var`);
-    break;
-  case "cuma":
-    console.log(`Programınızda Teamwork aktivitesi var`);
-    break;
-  case "cumartesi":
-    console.log(`Programınızda InClass ve Workshop aktivitesi var`);
-    break;
-  case "pazar":
-    console.log(`Programınızda Self-Study aktivitesi var`);
-    break;
-  default:
-    console.log(`Girdiğiniz değer haftanın bir günü değildir.`);
-    break;
-}
+// const gun = prompt("haftanın bir gününü giriniz:").toLowerCase();
 
+// switch (gun) {
+//   case "pazartesi":
+//   case "sali":
+//   case "carsamba":
+//   case "persembe":
+//     console.log(`Programınızda InClass aktivitesi var`);
+//     break;
+//   case "cuma":
+//     console.log(`Programınızda Teamwork aktivitesi var`);
+//     break;
+//   case "cumartesi":
+//     console.log(`Programınızda InClass ve Workshop aktivitesi var`);
+//     break;
+//   case "pazar":
+//     console.log(`Programınızda Self-Study aktivitesi var`);
+//     break;
+//   default:
+//     console.log(`Girdiğiniz değer haftanın bir günü değildir.`);
+    // break;
+// }
+
+// ? hoca çözümü
+// const gun = prompt("Lutfen bir gun giriniz: ").toLowerCase();
+// switch (gun) {
+//   case "pazartesi":
+//   case "sali":
+//   case "carsamba":
+//   case "persembe":
+//     console.log("Inclass");
+//     break;
+//   case "cuma":
+//     console.log("Teamwork");
+//     break;
+//   case "cumartesi":
+//     console.log("Inclass ve workshop");
+//     break;
+//   case "pazar":
+//     console.log("Self study.");
+//     break;
+//   default:
+//     console.log("Yanlis gun girildi");
+// }
 //**************** TERNARY *******************
 
 // //? ORNEK5: Kaldi-Gecti
