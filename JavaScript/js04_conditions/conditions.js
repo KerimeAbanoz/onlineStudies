@@ -24,7 +24,6 @@ console.log("****** CONDITIONS *******");
 // }
 // console.log(sayi, `girdisinin türü:`, typeof sayi);
 
-
 //! hocanın çözümü:
 
 // const sayi = Number(prompt("Bir sayi giriniz:"));
@@ -65,6 +64,7 @@ console.log("****** CONDITIONS *******");
 // console.log(`${enBuyuk} en buyuktur`);
 
 //! ODEV1: Dort Islem Hesap Makinasi
+//! iki sayı ve bir operatör(işlem ne ise +-/x falan) kullanıcıdan alıp sonucu yazdıracak
 
 //**************** SWITCH-CASE *******************
 
@@ -77,6 +77,35 @@ console.log("****** CONDITIONS *******");
 //! Cumartesi ->  InClass + Workshop
 //! Pazar -> Self-Study
 //! Aksi takdirde -> Yanlis gun girildi.
+
+const gun = prompt("haftanın bir gününü giriniz:");
+
+switch (gun) {
+  case "pazartesi":
+    console.log(`Programınızda InClass aktivitesi var`);
+    break;
+  case "salı":
+    console.log(`Programınızda InClass aktivitesi var`);
+    break;
+  case "çarşamba":
+    console.log(`Programınızda InClass aktivitesi var`);
+    break;
+  case "perşembe":
+    console.log(`Programınızda InClass aktivitesi var`);
+    break;
+  case "cuma":
+    console.log(`Programınızda Teamwork aktivitesi var`);
+    break;
+  case "cumartesi":
+    console.log(`Programınızda InClass ve Workshop aktivitesi var`);
+    break;
+  case "pazar":
+    console.log(`Programınızda Self-Study aktivitesi var`);
+    break;
+  default:
+    console.log(`Girdiğiniz değer haftanın bir günü değildir.`);
+    break;
+}
 
 //**************** TERNARY *******************
 
