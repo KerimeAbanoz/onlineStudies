@@ -74,3 +74,4 @@ const esitMi = (str1, str2) =>
 
 console.log(esitMi("MerHaba", "MERHABA"));
 console.log(esitMi("Hello", "Hell"));
+
