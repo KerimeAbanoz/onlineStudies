@@ -8,14 +8,25 @@ console.log("****** WHILE *******");
 //? 0-100'den farkli ise Kullaciniyi uyararak yeniden 0-100 arasinda
 //? not girmeye zorlayan kodu while dongusu ile yaziniz.
 
-let not = +prompt("Lutfen 0-100 arasinda bir not girniz.");
+//! benim çözümüm
+// let not = Number(prompt("Lütfen 0 ile 100 arasında bir not giriniz"));
 
-while (not < 0 || not > 100) {
-  console.log("Not 0-100 arasinda olmalidir");
-  not = prompt("Lutfen 0-100 arasinda bir not giriniz.");
-}
+// while (not < 0 || not > 100) {
+//   alert("Girdiğiniz sayı 0 ile 100 arasında olmalıdır.");
+//   not = Number(prompt("Lütfen 0 ile 100 arasında bir not giriniz"));
+// }
 
-console.log("Giridiginiz Not:", not);
+// console.log("Teşekkürler, geçemediniz.");
+
+//! hoca çözümü
+// let not = +prompt("Lutfen 0-100 arasinda bir not girniz.");
+
+// while (not < 0 || not > 100) {
+//   console.log("Not 0-100 arasinda olmalidir");
+//   not = prompt("Lutfen 0-100 arasinda bir not giriniz.");
+// }
+
+// console.log("Giridiginiz Not:", not);
 
 // if (not < 0 || not > 100) {
 //   alert("Not 0-100 arasinda olmalidir");
