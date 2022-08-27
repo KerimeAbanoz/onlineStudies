@@ -23,7 +23,7 @@ yazdir();
 //* ORNEK2:
 //*************************************************/
 
-function selamla(ad, soyAd = "") {
+function selamla(ad, soyAd = "boş bırakıldı") {
   console.log(`Merhaba ${ad} ${soyAd}`);
 }
 
@@ -34,7 +34,7 @@ selamla("John");
 
 //! Bir parametreyi cagirma sirasinda kullanmaz isek onun
 //! yerine default parametre atayabiliriz. Ornekteki lastName
-//! parametresi icin default değer olarak '' atanmistir.
+//! parametresi icin default değer olarak 'boş bırakıldı' atanmistir.
 
 //* ORNEK3:
 //***************************************************/
@@ -53,6 +53,15 @@ console.log(yasHesapla("Veli Canan", 1980));
 //* ORNEK4:
 //*****************************************************/
 
+//? benim çözümüm
+// function tekmi(sayi) {
+//   return sayi % 2 ? `${sayi} TEKTİR` : `${sayi} ÇİFTTİR`;
+// }
+
+// console.log(tekmi(3))
+// console.log(tekmi(4))
+
+//? hoca çözümü
 function tekCift(sayi) {
   return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
 }
