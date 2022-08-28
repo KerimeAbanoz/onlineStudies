@@ -36,3 +36,100 @@
   /* margin: 1rem; */
 }
 
+/** DIKEY HIZLAMA ORNEGI */
+
+.container1 {
+  height: 20rem;
+  background-color: greenyellow;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 20px 10px;
+  /* padding: 0.5rem; */
+
+  justify-content: center;
+
+  /*! Dikey Hizalama => align-items
+  /**  flex-start, flex-end,center, stretch,baseline */
+  /* align-items: flex-start; */
+  align-items: flex-end;
+  /* align-items: center; */
+  /* align-items: stretch; */ 
+  /** buna aşağıda verilen bir yükseklik değeri olduğu için çalışmaz. çalıştırmak için aşağıdaki height'ı kapat */
+  /* align-items: baseline; */
+
+  /*! Çok satırlı verilerin dikeyde hizalanmasi için kullanılır.
+  /*! flex-wrap: wrap modu */
+  align-content: flex-end;
+  overflow: auto;
+}
+
+.container1 div {
+  height: 5rem;
+  width: 5rem;
+  background-color: tomato;
+}
+
+/** FLEX-GROW */
+.container2 {
+  background-color: hotpink;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.container2 div {
+  background-color: khaki;
+  width: 5rem;
+
+  /*? tüm div'lerin büyüme oranına 1 verdik.*/
+  flex-grow: 1;
+
+  /*! flex-basis item'lara ihtiyacı kadar yer tahsis ediyor veya sadece icerigin buyuklugu kadar bir uzunluk veriyor (flex-basis:0); */
+  flex-basis: 0;
+}
+
+/*? grow2 classindakiler diğerlerine göre 2 kat daha fazla büyüyebilir.*/
+div.grow2 {
+  flex-grow: 2;
+}
+
+/*? grow3 classindakiler diğerlerine göre 3 kat daha fazla büyüyebilir.*/
+div.grow3 {
+  flex-grow: 3;
+}
+
+/*? nogrow classindakiler diğerlerine göre hiç büyümezler*/
+div.nogrow {
+  flex-grow: 0;
+}
+
+/** FLEX-GROW  (width)*/
+
+.container3 {
+  background-color: rgb(118, 105, 255);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  width: 50vw;
+}
+
+.container3 div {
+  background-color: lightcyan;
+}
+div.div1 {
+  width: 10%;
+}
+div.div2 {
+  width: 20%;
+}
+div.div3 {
+  width: 30%;
+}
+div.div4 {
+  width: 40%;
+}
