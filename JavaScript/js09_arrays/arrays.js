@@ -8,7 +8,7 @@ console.log("***** ARRAYS ******");
 //* ---------------------------------------------------------
 
 // ! 1.Yöntem (Array Literal) - Tercih edilen yöntem
-const isimler = ["ahmet", "ismet", "can", "canan", "satheww"];
+const isimler = ["ahmet", "ismet", "can", "canan", "matheww"];
 console.log(isimler);
 console.log(typeof isimler);
 console.log(isimler.length);
@@ -64,63 +64,62 @@ const kisiler = ["Ahmet", "Can", 2022, 2022 - 1990, true, yaslar];
 console.log(kisiler);
 
 //? kisiler icerisindeki yaslar dizisinde bulunan 55 yasini konsola yazdiriniz.
+
 const yas55 = kisiler[5][2];
 console.log(yas55);
 
 //? kisiler icerisindeki yaslar dizisinde bulunan 44 yasini bir eksiltiniz.
-kisiler[5][1]--;
-console.log(kisiler[5]);
+kisiler[5][1]--; //?43
 console.log(kisiler);
 console.log(yaslar);
 
-//? ====================================================
-//? DİZİYİ DEĞİŞTİREN (MUTATOR) METODLAR
-//? ====================================================
+//? ===========================================================
+//?  DIZIYI DEGISTIREN (MUTATOR) METOTLAR
+//? ===========================================================
 
 const arabalar = ["BMW", "Mercedes", "Fiat", "Anadol"];
 
-//* pop() son elemanı siler ve sildiği elemanı döndürür.
+//** pop() son elemanı siler ve sildigi elemani dondurur.
 const silinen = arabalar.pop();
 console.log(arabalar, silinen);
 
-//* push() dizinin sonuna eleman ekler ve son eleman sayısını döndürür
+//* push() dizinin sonuna eleman ekler ve dizinin son eleman sayisini dondurur.
 
 const n = arabalar.push("Citroen");
 console.log(arabalar, n);
 
-//* unshift dizinin 0. indeksine eleman ekler ve dizinin eleman sayısını döndürür
-
+//* unshift dizinin 0. indeksine eleman ekler ve dizinin son eleman sayisini dondurur.
 const n1 = arabalar.unshift("Audi");
 console.log(arabalar, n1);
 
-//* dizinin 0. elemannını siler ve silinen elemanı döndürür
+//* dizinin 0. indeks elemanini siler ve silenen elemani dondurur
 const audi = arabalar.shift();
 console.log(arabalar, audi);
 
-//* slpice()
-//*1. parametre eklenecek indis numarası
-//* 2. parametre 0 ise araya ekle, 1 ise üzerine yaz
-//* 3. parametre ekleneecek veri
-
+//* splice()
+//? 1.parametre: eklenecek indis numarasi
+//? 2.parametre: 0 ise araya ekleme, 1 ise uzerine yazma
+//? 3.parametre: yeni eklenecek veri
 arabalar.splice(1, 0, "Passat");
 console.log(arabalar);
 
 arabalar.splice(3, 1, "Honda", "Toyota");
 console.log(arabalar);
 
-//* reverse() Dizinin tamamını ters sıraya çevirir
-arabalar.reverse(3, 1, "Honda");
+//* Dizinin tamamini ters siraya cevirir.
+arabalar.reverse();
 console.log(arabalar);
 
-//* sort() diziyi alfabetik olarak sıralar
+//* sort() Diziyi alfabetik olarak siralar.
 isimler.sort();
 console.log(isimler);
 
-//! alfabetik sıraladığı için doğru sonuç çıkmayablir
-const sayilar = [2, 111, 3, 1, 11, 5, 7, 6];
+//! Alfabetik siraladigi icin dogru sonuc cikmayabilir.
+const sayilar = [2, 111, 3, 22, 1, 11, 5, 7, 6];
 sayilar.sort();
 console.log(sayilar);
 
+//* sort metodu diziyi iterasyona ugratir ve parametre olark aldigi arrow
 //* fonksiyonunu dizinin her bir elemanina uygular. Bu sayede kucuk sayilar
 //* ile buyuk sayilari yer degistirerek siralama islemini gerceklestirir.
 sayilar.sort((a, b) => a - b);
@@ -133,5 +132,90 @@ console.log(array1);
 
 array1.fill(1, 2, 4);
 console.log(array1);
-array1.fill(-1, 1);
+array1.fill(-1, 1); //* 1. eleman ve sonrasini -1 yap
 console.log(array1);
+
+//? ===========================================================
+//?  DIZI ERISIM METOTLARI
+//? ===========================================================
+const sayilar1 = [3, 5, 2, "2", "uc", 2, "3", "bes", "5"];
+
+//* includes()
+//*-----------------------------------------------------------
+
+console.log(sayilar.includes(5)); //? true
+console.log(sayilar.includes("5")); //? false
+
+//* indexOf(),  lastIndexOf();
+//*-----------------------------------------------------------
+//* ilk eslesen indeksi dondurur.
+
+console.log(sayilar1.indexOf(2)); //? 2
+console.log(sayilar1.lastIndexOf(2)); //? 5
+console.log(sayilar1.lastIndexOf(4)); //? -1
+
+//! Odev: prompt ile konsoldan bir sayi istenmeli (string veya number
+//! olarak) eger bu girilen sayi, dizi icerisinde bulunuyorsa indisi
+//! (string ve number olarak ayri) yazdirilmalidir. Eger bulunamadiysa
+//! Aranilan bulunamamistir yazidirilmalidir.
+//!-----------------------------------------------------------
+
+//* join()
+//*-----------------------------------------------------------
+//? join, dizinin elamanlari birlestirip string hale cevirir.
+console.log(sayilar1.join(" "));
+console.log(sayilar1.join());
+console.log(sayilar1);
+
+//* toString()
+//*-----------------------------------------------------------
+//? toString fonksiyonu sadece dizinin elemanlarinin aralarina
+//? (virgul) koyarak birlestirir ve string yapar.
+console.log(sayilar1.toString());
+
+//* slice()
+//*-----------------------------------------------------------
+const arabalar1 = ["BMW", "Mercedes", "Fiat", "Anadol"];
+
+const yeniArabalar = arabalar1.slice(2);
+console.log(yeniArabalar, arabalar1);
+
+const yeniArabalar1 = arabalar1.slice(1, 3);
+console.log(yeniArabalar1);
+
+//* concat()
+//*-----------------------------------------------------------
+const yazilar = ["Bugun", "hava", "çok", "guzel"];
+const numbersArr = [1, 2, 5, 7];
+const combinedArr = yazilar.concat(
+  true,
+  numbersArr,
+  ["aslinda", "cok", "sicak"],
+  [["x", "y"]]
+);
+console.log(combinedArr);
+
+//* every()
+//*-----------------------------------------------------------
+
+//? Tum diziyi itere eder ve aldigi callback fonksiyonuna gore
+//? test gerceklestirir.Tum elemanlar icin test basarili ise
+//? true aksi takdirde false deger dondurur.
+
+//* some()
+//*-----------------------------------------------------------
+//? Aldigi callback fonksiyonuna gore test gerceklestirir.
+//? En az bir eleman icin bile test basarili ise true aksi
+//? takdirde false deger dondurur.
+
+//* find()
+//*-----------------------------------------------------------
+//? Aldigi callback fonksiyonuna gore test gerceklestirir.
+//? Kosulu saglayan ilk dizi elemaninin dondurur.
+//? Eger hic bir eleman kosulu saglamazsa undefined dondurur.
+
+//* findIndex()
+//*-----------------------------------------------------------
+//? Aldigi callback fonksiyonuna gore test gerceklestirir.
+//? Kosulu saglayan ilk dizi elemaninin indeksini dondurur.
+//? Eger hic bir eleman kosulu saglamazsa -1 dondurur.
