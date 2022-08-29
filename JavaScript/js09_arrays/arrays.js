@@ -202,9 +202,11 @@ console.log(combinedArr);
 //? test gerceklestirir.Tum elemanlar icin test basarili ise
 //? true aksi takdirde false deger dondurur.
 
-const yasArray = [18, 22, 34, 78, 81];
+const yasArray = [18, 22, 78, 34, 78, 81];
 const check = yasArray.every((yas) => yas >= 18);
-check ? console.log("Dizideki herkes 18den büyüktür") : console.log("18 yaş altı var")
+check
+  ? console.log("Dizideki herkes 18den büyüktür")
+  : console.log("18 yaş altı var");
 
 //* some()
 //*-----------------------------------------------------------
@@ -212,14 +214,27 @@ check ? console.log("Dizideki herkes 18den büyüktür") : console.log("18 yaş 
 //? En az bir eleman icin bile test basarili ise true aksi
 //? takdirde false deger dondurur.
 
-//* find()
+const buyuk80 = yasArray.some((yas) => yas >= 80);
+console.log(buyuk80); //? false
+
+//* find(), findLast()
 //*-----------------------------------------------------------
 //? Aldigi callback fonksiyonuna gore test gerceklestirir.
 //? Kosulu saglayan ilk dizi elemaninin dondurur.
 //? Eger hic bir eleman kosulu saglamazsa undefined dondurur.
+
+//? Yasi 30'dan buyuyk olan ilk elemanı yazdırın:
+const yasIlk30 = yasArray.find((yas) => yas >= 30);
+const yasSon30 = yasArray.findLast((yas) => yas >= 30);
+console.log(yasIlk30, yasSon30);
+
+const names = ["Ahmet", "Can", "Mustafa", "Merve", "Can"];
 
 //* findIndex()
 //*-----------------------------------------------------------
 //? Aldigi callback fonksiyonuna gore test gerceklestirir.
 //? Kosulu saglayan ilk dizi elemaninin indeksini dondurur.
 //? Eger hic bir eleman kosulu saglamazsa -1 dondurur.
+
+const foundIndex = yasArray.findIndex((yas) => yas >= 30);
+console.log(foundIndex);
