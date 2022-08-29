@@ -134,4 +134,4 @@ console.log(array1);
 array1.fill(1, 2, 4);
 console.log(array1);
 array1.fill(-1, 1);
-console.log(array1)
+console.log(array1);
