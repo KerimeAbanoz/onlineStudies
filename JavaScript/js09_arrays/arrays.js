@@ -202,6 +202,10 @@ console.log(combinedArr);
 //? test gerceklestirir.Tum elemanlar icin test basarili ise
 //? true aksi takdirde false deger dondurur.
 
+const yasArray = [18, 22, 34, 78, 81];
+const check = yasArray.every((yas) => yas >= 18);
+check ? console.log("Dizideki herkes 18den büyüktür") : console.log("18 yaş altı var")
+
 //* some()
 //*-----------------------------------------------------------
 //? Aldigi callback fonksiyonuna gore test gerceklestirir.
