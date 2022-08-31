@@ -4,7 +4,7 @@
 
 console.log("******* LOOPS IN ARRAYS ******");
 
-console.log("****** ITERATION **********");
+//?--------------- ÖRNEK ---------------------
 
 const dizi = [-5, 15, 22, -4, 45, 78];
 
@@ -25,22 +25,21 @@ dizilereAyır(dizi);
 console.log(negatifler);
 console.log(pozitifler);
 
+//?--------------- ÖRNEK ---------------------
+//? Dizideki notlarin ortalamasini hesaplayiniz.
+const notlar = [55, 77, 23, 89, 100];
 
+let toplam = 0;
 
+for (let i = 0; i < notlar.length; i++) {
+  toplam += notlar[i];
+}
 
-
-
+console.log("ORTALAMA:", toplam / notlar.length);
 
 //* ======================================================
 //*                   FOR-IN LOOP
 //* ======================================================
-
-
-
-
-
-
-
 
 //* ======================================================
 //*                   FOR-OF LOOP
