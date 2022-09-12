@@ -11,16 +11,23 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container mt-4">
       <h1 class="text-center text-danger">Programming Language</h1>
       <main>
         <section>
-          <input type="text" class="" placeholder="Please enter a language" />
+          <input
+            type="text"
+            class="lang-input"
+            placeholder="Please enter a language"
+          />
           <button id="add-btn" class="btn btn-success">ADD</button>
           <button id="delete-btn" class="btn btn-danger">DELETE</button>
         </section>
+
         <section id="lang-list"></section>
       </main>
     </div>
