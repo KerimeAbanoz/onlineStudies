@@ -55,7 +55,7 @@ const findStudents = (arr, search) => {
   let counter = 0;
   for (let i in arr) {
     if (search === arr[i]) {
-      counter++;
+      counjter++;
     }
   }
   if (counter === 0) {
