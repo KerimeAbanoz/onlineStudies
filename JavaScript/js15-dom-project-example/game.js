@@ -33,6 +33,8 @@ document.querySelector(".check-btn").addEventListener("click", () => {
       document.querySelector(".top-score").textContent = topScore;
     }
     document.querySelector(".secret-number").textContent = randomNumber;
+
+    //! eğer rastgele != input value
   } else {
     if (score > 0) {
       score--;
