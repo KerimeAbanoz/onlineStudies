@@ -36,7 +36,7 @@ document.querySelector(".check-btn").addEventListener("click", () => {
 
     //! eğer rastgele != input value
   } else {
-    if (score > 0) {
+    if (score > 1) {
       score--;
       guessInput > randomNumber
         ? (msg.innerText = "DECREASE")
