@@ -47,7 +47,7 @@ productsDiv.addEventListener("click", (event) => {
     event.target.parentElement.parentElement.parentElement.remove();
     calculateCartPrice();
   } else {
-    //* console.log("other element is clicked");
+    console.log("other element is clicked!");
   }
 });
 
