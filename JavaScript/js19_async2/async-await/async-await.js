@@ -22,15 +22,18 @@
 //const res = await fetch("......url......")
 
 //}
+let isError = false;
 
 const getNews = async function () {
   const API_KEY = "6e78d6a8e7274bcaa30783a1478193d4";
   const url =
     "https://newsapi.org/v2/top-headlines?country=tr&apiKey=" + API_KEY;
+
   try {
     const res = await fetch(url);
     if (!res.ok) {
-      throw new Error(`Something went wrong ${res.status}`);
+      isError = true;
+      // throw new Error(`Something went wrong ${res.status}`); //! hata fırlat dersen aşağıdaki resim eklediğin kod çalışmaz!!!!
     }
     const data = await res.json();
     // console.log(data.articles);
@@ -42,6 +45,13 @@ const getNews = async function () {
 
 const renderNews = (news) => {
   const newsList = document.getElementById("news-list");
+  if (isError) {
+    newsList.innerHTML += `
+    <h2>News can not be fetched</h2>
+    <img src="./img/404.png" alt="">
+    `;
+    return;
+  }
   news.forEach((item) => {
     const { title, description, urlToImage, url } = item; //! destr
     newsList.innerHTML += `
