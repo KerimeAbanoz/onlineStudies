@@ -20,7 +20,7 @@ const getWeatherDataFromApi = async () => {
   const tokenKey = DecryptStringAES(
     "cTbHRuU/pCtrC97jx1qT6RSqXWCSzV1/lNyeopOsOlqfccgiQrBizdZ/tmqRoJQ/"
   );
-  alert(tokenKey);
+  // alert(tokenKey);
   const inputValue = input.value;
   const units = "metric";
   const lang = "tr";
@@ -33,10 +33,28 @@ const getWeatherDataFromApi = async () => {
   const iconUrl = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
   const iconUrlAWS = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${weather[0].icon}.svg`;
 
+  const cityNameSpans = list.querySelectorAll(".city span");
+  const cityNameSpansArray = Array.from(cityNameSpans);
+  if (cityNameSpansArray.length > 0) {
+    const filteredArray = cityNameSpansArray.filter(
+      (span) => span.innerText == name
+    );
+    if (filteredArray.length > 0) {
+      msg.innerText = `You already know the weather for ${name}, Please search for another city 😉`;
+      setTimeout(() => {
+        msg.innerText = ""
+      }, 5000)
+      form.reset();
+      return;
+    }
+  }
+  console.log(cityNameSpans);
+
   const createdLi = document.createElement("li");
   createdLi.classList.add("city");
-  createdLi.innerHTML = 
-  `<h2 class="city-name" data-name="${name}, ${sys.country}">
+  createdLi.innerHTML = `<h2 class="city-name" data-name="${name}, ${
+    sys.country
+  }">
     <span>${name}</span>
     <sup>${sys.country}</sup>
   </h2>
@@ -45,6 +63,9 @@ const getWeatherDataFromApi = async () => {
     <img class="city-icon" src="${iconUrl}">
     <figcaption>${weather[0].description}</figcaption>
   </figure>`;
+  // append vs prepend
+  list.prepend(createdLi);
+  form.reset();
 };
 
 // const form = document.querySelector("section.top-banner form");
