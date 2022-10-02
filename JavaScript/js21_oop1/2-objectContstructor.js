@@ -9,3 +9,40 @@
 //* Ornegin Date ve Array nesneleri Object.prototype'dan miras almaktadir.
 
 //? Object Constructor
+function Book(title, author, year) {
+  this.title = title;
+  this.author = author;
+  this.year = year;
+  //   this.getSummary = function () {
+  //     return `${this.title} was written by ${this.author} in ${this.year}`;
+  //   };
+}
+
+//? new keyword'u Book Constructor'ini parameterler ile cagirmaktadir.
+//? Constructor ise Book nesnesinden bir ornek (instance) olusturmaktadir.
+//? Constructor, mantiksal bir ifade iken instance fiziksel bir olusum gibi dusunulebilir.
+//? Contructor'da tanimlanmis tum degisken ve fonksiyonlar olusturulan
+//? her bir instance'da hayat bulmus olur.
+
+//? instance
+const book1 = new Book("Kaşağı", "Ömer Seyfettin", 1920);
+
+//? instance
+const book2 = new Book("Sinekli Bakkal", "H. Edip Adıvar", 1930);
+Book.prototype.getAge = function () {
+  return new Date().getFullYear() - this.year;
+};
+book1.prototype.getSummary = function () {
+  return `${this.title} was written by ${this.author} in ${this.year}`;
+};
+
+console.log(book1);
+console.log(book1.getSummary());
+
+book1.price = 100;
+
+console.log(book1, book2);
+
+console.log(book1, book2);
+console.log(book1.getAge());
+console.log(book2.getAge());
