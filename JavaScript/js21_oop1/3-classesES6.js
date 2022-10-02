@@ -50,4 +50,4 @@ class Magazine extends Book {
 
 //? Magazine objesinin yeni bir instance'ı
 const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
-console.log(mag1);
+console.log(mag1.getSummary);
