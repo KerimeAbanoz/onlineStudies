@@ -1,34 +1,38 @@
-function add(n1, n2) {
-  return n1 + n2;
+function add(n1, n2){
+  return n1 + n2
 }
 
-const WORKING_HOURS_WEEK = 40; // 45 , 30
+// function add(n1, n2) {
+//   return n1 + n2;
+// }
 
-let counter = 0;
-let localCounter = 0;
+// const WORKING_HOURS_WEEK = 40; // 45 , 30
 
-function inc(amount = 1) {
-  counter += amount;
-  return counter;
-}
+// let counter = 0;
+// let localCounter = 0;
 
-function dec(amount = 1) {
-  counter -= amount;
-  return counter;
-}
+// function inc(amount = 1) {
+//   counter += amount;
+//   return counter;
+// }
 
-const moduleName = "Module 1";
-// export default moduleName;
+// function dec(amount = 1) {
+//   counter -= amount;
+//   return counter;
+// }
 
-export default (num) => num * num;
+// const moduleName = "Module 1";
+// // export default moduleName;
 
-export {
-  WORKING_HOURS_WEEK,
-  WORKING_HOURS_WEEK as WHW,
-  add as sum,
-  inc,
-  dec,
-  counter,
-};
+// export default (num) => num * num;
 
-console.log("module 1 is loaded");
+// export {
+//   WORKING_HOURS_WEEK,
+//   WORKING_HOURS_WEEK as WHW,
+//   add as sum,
+//   inc,
+//   dec,
+//   counter,
+// };
+
+// console.log("module 1 is loaded");
