@@ -44,3 +44,15 @@ const showLoading = () => {
 const removeLoading = () => {
     loading.style.display = "none";
 }
+
+const postErrorLog = (location, errorText, funcName, statusCode) => {
+    // $.ajax({
+    //     type : "POST",
+    //     url : url,
+    //     dataType : "json",
+    //     success: (response) => {},
+    //     beforeSend : (request) => {},
+    //     complete : ()=>{},
+    //     error : (XMLHttpRequest) =>{}
+    // })
+}
