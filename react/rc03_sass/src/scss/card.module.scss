@@ -1,0 +1,12 @@
+@import "variables";
+
+.container {
+    border: 1px solid red;
+    text-align: center;
+    
+    .card {
+        img{
+            width: 40%;
+        }
+    }
+}
