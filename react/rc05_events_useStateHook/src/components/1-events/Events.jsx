@@ -31,6 +31,9 @@ const Events = () => {
       <button onClick={handleClick} className="btn btn-success">
         Click
       </button>
+            {/* Eger bir event fonksiyonunun paremetresi olmasi gerekiyorsa
+      bu fonksiyon bir arrow fonks. tarafindan  cagrilmalidir. Aksi
+      takdirde event fonksiyonu event gerceklesmeden cagirilir */}
       <button
         onClick={() => handleClear("Clear Btn Clicked")}
         className="btn btn-dark"
