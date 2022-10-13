@@ -4,8 +4,9 @@ import Counter from "./components/2-classComponent/Counter";
 function App() {
   return (
     <div>
-      <Events/>
-      <Counter/>
+      <Events />
+      <Counter />
+      <Counter count={5} />
     </div>
   );
 }
