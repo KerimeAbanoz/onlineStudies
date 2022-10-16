@@ -30,6 +30,14 @@ const UseStateCounter = () => {
 
   const [count, setCount] = useState(0); //? arr destr.
 
+  const [person, setPerson] = useState({
+    name: "John",
+    surname: "Doe",
+    age: 43,
+  });
+
+  console.log(person);
+
   const inc = () => {
     setCount(count + 1);
   };
@@ -39,29 +47,50 @@ const UseStateCounter = () => {
   //     setCount(count - 1);
   //   }
   // };
-  
+
+  const incAge = () => {
+    //? bu şekilde bir atama ile sayısal değer state'in üzerine yazılmış oldu.
+    //? dolayısıyla object yapısı bozuldu
+
+    // setPerson(person.age + 1);
+    // setPerson({ name: "Ahmet", surname: "Can", age: 44 });
+
+    setPerson({...person, age: person.age + 1 });
+  };
+  console.log(person);
   return (
     <div className="container text-center mt-4">
-      <h1>USESTATE HOOK</h1>
-      <h2 className="display-4 text-danger">COUNT:{count}</h2>
-      <button onClick={inc} className="btn btn-success">
-        INC
-      </button>
-      <button onClick={() => setCount(0)} className="btn btn-dark">
-        CLR
-      </button>
+      <section>
+        <h1>USESTATE HOOK</h1>
+        <h2 className="display-4 text-danger">COUNT:{count}</h2>
+        <button onClick={inc} className="btn btn-success">
+          INC
+        </button>
+        <button onClick={() => setCount(0)} className="btn btn-dark">
+          CLR
+        </button>
 
-      {/* <button onClick={dec} className="btn btn-danger">
+        {/* <button onClick={dec} className="btn btn-danger">
         DEC
       </button> */}
-      <button onClick={()=> count >0 && setCount(count -1)} className="btn btn-danger">DEC</button>
+        <button
+          onClick={() => count > 0 && setCount(count - 1)}
+          className="btn btn-danger"
+        >
+          DEC
+        </button>
+      </section>
+      <section>
+        <h1>USESTATE OBJECT</h1>
+        <h2>{person.name}</h2>
+        <h2>{person.surname}</h2>
+        <h4>{person.age}</h4>
+        <button onClick={incAge} className="btn btn-info">
+          inc age
+        </button>
+      </section>
     </div>
   );
 };
 
 export default UseStateCounter;
-
-//? bu şekilde bir atama ile sayısal değer state'in üzerine yazılmış oldu.
-//? dolayısıyla object yapısı bozuldu
-// setPerson(person.age +1);
-// setPerson({ name: "Ahmet", surname: "Can", age: 44 });
