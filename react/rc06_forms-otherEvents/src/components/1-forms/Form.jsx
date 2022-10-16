@@ -1,6 +1,11 @@
 const Form = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    console.log("Submitted");
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h1 className="display-5 text-danger">FORMS</h1>
       <div className="mb-3">
         <label htmlFor="username" className="form-label">
