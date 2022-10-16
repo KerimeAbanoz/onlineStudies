@@ -18,20 +18,28 @@
 //?    https://reactjs.org/docs/hooks-rules.html
 //* =============================================================
 
+const UseStateCounter = () => {
+  return (
+    <div className="container text-center mt-4">
+      <h1>USESTATE HOOK</h1>
+      <h2 className="display-4 text-danger">COUNT:</h2>
+      <button className="btn btn-success">INC</button>
 
-  //* useState en cok kullanilan Hook'tur.
-  //* Bir state'in degisken, dizi ve obje ile kullanilabilmesine olanak saglar.
-  //? useState hook'u bir dizi dondurur.Bu dizi array dest ile acilabilir.
-  //?  Acilan dizinin 1.elemani state degiskenidir.
-  //?  2.si ise state'i degistirmeye izin veren bir setter metodudur.
-  //? useState parametre olarak state'in ilk degerini alir.
+      <button className="btn btn-danger">DEC</button>
+    </div>
+  );
+};
 
- 
+export default UseStateCounter;
 
+//* useState en cok kullanilan Hook'tur.
+//* Bir state'in degisken, dizi ve obje ile kullanilabilmesine olanak saglar.
+//? useState hook'u bir dizi dondurur.Bu dizi array dest ile acilabilir.
+//?  Acilan dizinin 1.elemani state degiskenidir.
+//?  2.si ise state'i degistirmeye izin veren bir setter metodudur.
+//? useState parametre olarak state'in ilk degerini alir.
 
-
-
-    //? bu şekilde bir atama ile sayısal değer state'in üzerine yazılmış oldu.
-    //? dolayısıyla object yapısı bozuldu
-    // setPerson(person.age +1);
-    // setPerson({ name: "Ahmet", surname: "Can", age: 44 });
+//? bu şekilde bir atama ile sayısal değer state'in üzerine yazılmış oldu.
+//? dolayısıyla object yapısı bozuldu
+// setPerson(person.age +1);
+// setPerson({ name: "Ahmet", surname: "Can", age: 44 });
