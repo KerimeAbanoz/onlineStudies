@@ -10,7 +10,11 @@ const Form = () => {
     console.log("Submitted");
     alert(`username: ${username}
     email: ${email}
-    password: ${password}`);
+    password: ${password}
+    `);
+    setUsername("");
+    setEmail("");
+    setPassword("");
   };
 
   const handleUsername = (e) => {
