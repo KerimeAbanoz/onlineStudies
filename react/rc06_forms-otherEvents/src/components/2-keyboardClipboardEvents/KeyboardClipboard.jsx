@@ -18,7 +18,6 @@ const KeyboardClipboard = () => {
     e.preventDefault();
   };
 
-
   return (
     <div className="container text-center">
       <h1>CLIPBOARD EVENTS</h1>
@@ -44,8 +43,6 @@ const KeyboardClipboard = () => {
       </p>
 
       <textarea
-      style={{border: "1px solid blue"}}
-      // value= {textAreaValue}
         className="form-control"
         name="area"
         id="area"
