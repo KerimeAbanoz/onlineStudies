@@ -24,6 +24,8 @@ const KeyboardClipboard = () => {
     // e.target.style.border = e.target.style.border = "";
   };
 
+
+  
   return (
     <div className="container text-center">
       <h1>CLIPBOARD EVENTS</h1>
