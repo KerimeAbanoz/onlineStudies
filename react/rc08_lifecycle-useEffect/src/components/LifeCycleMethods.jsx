@@ -45,7 +45,12 @@ class LifeCycleMethods extends React.Component {
   //! prevState ve prevProps degerlerini parametre olarak alabilir.
   componentDidUpdate(prevProps, prevState) {
     console.log("updated");
-    console.log(prevState.count);
+    // console.log(prevState.count);
+  }
+
+  //! 5-) Bir component DOM ağacından kaldırıldıktan hemen sonra çağırılır.
+  componentWillUnmount() {
+    console.log("Unmounted");
   }
 
   render() {
