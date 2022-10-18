@@ -41,14 +41,14 @@ class LifeCycleMethods extends React.Component {
     console.log("Mounted");
   }
 
-  //! 4-) Bu metot ilk render haric diger tum render'lardan sonra cagriilir.
-  //! prevState ve prevProps degerlerini parametre olarak alabilir.
+  //! 4-) Bu metot ilk render haric diger tüm render'lardan sonra cagrilir.
+  //!  prevState ve prevProps degerlerini parametre olarak alabilir.
   componentDidUpdate(prevProps, prevState) {
-    console.log("updated");
+    console.log("Updated");
     // console.log(prevState.count);
   }
 
-  //! 5-) Bir component DOM ağacından kaldırıldıktan hemen sonra çağırılır.
+  //! 5-) Bir component DOM agacindan kaldiriltiktan hemen sonra cagirlir.
   componentWillUnmount() {
     console.log("Unmounted");
   }

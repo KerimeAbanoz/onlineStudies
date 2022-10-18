@@ -36,37 +36,38 @@ const UseEffectHook = () => {
   //? componentDidMount
   //! fetch, asyn-await ,localStorage, setTimeout, setInterval();
   // useEffect(() => {
-  //   console.log("mounting");
+  //   console.log("Mounting");
   //   setTimeout(() => {
-  //     alert("data fetched");
+  //     alert("Data Fetched");
   //   }, 3000);
   // }, []);
-  // console.log("rendering");
 
-  //? componentDidMount + componentDidUpdate
-
+  //?componentDidMount + componentDidUpdate
   // useEffect(() => {
-  //   console.log("mounting + Updating");
+  //   console.log("Mounting + Updating");
   //   setTimeout(() => {
-  //     alert("data fetched");
-  //   }, 3000);
+  //     alert("Data Fetched");
+  //   }, 1000);
   // }, [count]);
-  // console.log("rendering");
 
-    //? componentDidUnmount
+  //?componentDidUnmount
+  const fetchData = () => {
+    console.log("Data Fetched");
+  };
 
-    const fetchData =()=> {
-      console.log("data fetched")
-    }
-    useEffect(() => {
-      const timerId = setInterval(fetchData, 1000);
-    
-      return () => {
+  useEffect(() => {
+    //! ComponentDidMount
+    const timerId = setInterval(fetchData, 1000);
+    console.log("Mounting");
 
-      }
-    }, [])
-    
+    return () => {
+      //! componentWillUnmount
+      clearInterval(timerId);
+      console.log("Unmounting");
+    };
+  }, []);
 
+  console.log("Rendering");
   return (
     <div className="container text-center">
       <h1 className="text-danger">USE EFFECT</h1>
@@ -79,33 +80,3 @@ const UseEffectHook = () => {
 };
 
 export default UseEffectHook;
-
-//   //? componentDidMount
-//   //! fetch, asyn-await ,localStorage, setTimeout, setInterval();
-//   // useEffect(() => {
-//   //   console.log("Mounting");
-//   //   setTimeout(() => {
-//   //     alert("Data Fetched");
-//   //   }, 3000);
-//   // }, []);
-
-//   //?componentDidMount + componentDidUpdate
-
-//   useEffect(() => {
-//     console.log("Mounting + Updating");
-//     setTimeout(() => {
-//       alert("Data Fetched");
-//     }, 1000);
-//   }, [count]);
-
-//   console.log("Rendering");
-//   return (
-//     <div className="container text-center">
-//       <h1 className="text-danger">USE EFFECT</h1>
-//       <h3>COUNT={count}</h3>
-//       <button className="btn btn-info" onClick={() => setCount(count + 1)}>
-//         INC
-//       </button>
-//     </div>
-//   );
-// };
