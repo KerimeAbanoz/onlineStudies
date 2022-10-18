@@ -32,6 +32,41 @@ import { useState, useEffect } from "react";
 
 const UseEffectHook = () => {
   const [count, setCount] = useState(0);
+
+  //? componentDidMount
+  //! fetch, asyn-await ,localStorage, setTimeout, setInterval();
+  // useEffect(() => {
+  //   console.log("mounting");
+  //   setTimeout(() => {
+  //     alert("data fetched");
+  //   }, 3000);
+  // }, []);
+  // console.log("rendering");
+
+  //? componentDidMount + componentDidUpdate
+
+  // useEffect(() => {
+  //   console.log("mounting + Updating");
+  //   setTimeout(() => {
+  //     alert("data fetched");
+  //   }, 3000);
+  // }, [count]);
+  // console.log("rendering");
+
+    //? componentDidUnmount
+
+    const fetchData =()=> {
+      console.log("data fetched")
+    }
+    useEffect(() => {
+      const timerId = setInterval(fetchData, 1000);
+    
+      return () => {
+
+      }
+    }, [])
+    
+
   return (
     <div className="container text-center">
       <h1 className="text-danger">USE EFFECT</h1>
